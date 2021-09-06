@@ -1,0 +1,15 @@
+{
+  "name": "traggla-backend",
+  "version": "1.0.0",
+  "description": "Backend Service for Traggla Admin.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Calle Leppäjoki",
+  "license": "ISC",
+  "bin": {
+    "hello": "./bin/index.js"
+  },
+  "dependencies": { }
+}
