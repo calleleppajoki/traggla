@@ -11,5 +11,7 @@
   "bin": {
     "hello": "./bin/index.js"
   },
-  "dependencies": { }
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

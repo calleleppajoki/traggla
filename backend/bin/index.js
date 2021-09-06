@@ -1,13 +1,27 @@
-#!/usr/bin/env node
+// don't need this if it's a backend thingy #!/usr/bin/env node
 
 const fs = require('fs');                       // File system
+const express = require('express')              // Why webdev, why
 
-Init();
+const app = express()
 
-function Init()
-{
-    SaveToFile();
-}
+app.get('/', (req, res) => {
+  res.send('Hi!')
+  console.log('Got got')
+})
+
+app.post('/', function (req, res) {
+    res.send('Got a POST request')
+    console.log('postpost')
+  })
+
+const server = app.listen(3000, () => console.log('Server ready'))
+
+process.on('SIGTERM', () => {
+  server.close(() => {
+    console.log('Process terminated')
+  })
+})
 
 function GetWritePath()
 {
